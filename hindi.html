@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>होम मेडिकेयर - होम केयर सेवाएं</title>
+</head>
+<body data-locale="hi-IN">
+  <header class="site-header">
+    <div class="site-left">
+      <img src="logo.jpg" alt="Home Medicare Logo" class="site-logo" />
+      <div class="site-title">
+        <h1>होम मेडिकेयर</h1>
+        <p>घर पर देखभाल और आराम</p>
+      </div>
+    </div>
+    <div class="site-actions">
+      <button class="lang-link" onclick="location.href='english.html'">English</button>
+      <button class="contact-btn" onclick="window.contactUs(null, 'सामान्य प्रश्न')">संपर्क</button>
+    </div>
+  </header>
+
+  <section class="hero container" aria-hidden="false">
+    <div class="left">
+      <h1>पेशेवर होम केयर, गरिमा के साथ</h1>
+      <p>नर्सिंग, बेडसाइड केयर और उन्नत सहायता — घर के आराम में।</p>
+      <div class="hero-cta">
+        <button class="btn-primary" onclick="location.href='#services'">सेवाओं का अन्वेषण करें</button>
+        <button class="btn-outline" onclick="window.contactUs(null, 'सामान्य प्रश्न')">बैक कॉल का अनुरोध</button>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <img src="images/mother_baby.png" width="100%" height="100%" viewBox="0 0 600 400" >
+        <rect width="100%" height="100%" fill="#fff" rx="8"></rect>
+        <g transform="translate(40,20)" fill="#b97b7b" opacity="0.95">
+          <circle cx="80" cy="100" r="70"></circle>
+        </g>
+      </img>
+    </div>
+  </section>
+
+  <div class="container" id="services">
+    <h2 style="text-align:center; color:#2c7be5;">हमारी सेवाएं</h2>
+    <div class="services">
+      <div class="product-card">
+        <div class="product-media">
+          <img class="service-image" src="images/bedside.png" alt="बेडसाइड देखभाल">
+        </div>
+        <div class="product-meta"><span class="price">₹499 से</span><span class="badge">लोकप्रिय</span></div>
+        <h3>बेडसाइड देखभाल</h3>
+        <p>बेडसाइड पर दयालु व्यक्तिगत देखभाल और सहायता।</p>
+        <div class="card-footer">
+          <button class="btn-cta call-btn" data-service="बेडसाइड देखभाल">कॉल</button>
+          <button class="btn-cta request-btn" data-service="बेडसाइड देखभाल">बैक कॉल</button>
+        </div>
+      </div> 
+
+      <div class="product-card">
+        <div class="product-media">
+          <img class="service-image" src="images/nursing.png" alt="होम नर्सिंग केयर">
+        </div>
+        <div class="product-meta"><span class="price">₹699 से</span><span class="badge">विश्वसनीय</span></div>
+        <h3>होम नर्सिंग केयर</h3>
+        <p>घर के आराम में पेशेवर नर्सिंग सेवाएं।</p>
+        <div class="card-footer">
+          <button class="btn-cta call-btn" data-service="होम नर्सिंग केयर">कॉल</button>
+          <button class="btn-cta request-btn" data-service="होम नर्सिंग केयर">बैक कॉल</button>
+        </div>
+      </div> 
+
+      <div class="product-card">
+        <div class="product-media">
+          <img class="service-image" src="images/physio.png" alt="होम फिजियोथेरेपी">
+        </div>
+        <div class="product-meta"><span class="price">₹599 से</span><span class="badge">केयर</span></div>
+        <h3>होम फिजियोथेरेपी</h3>
+        <p>रिकवरी और गतिशीलता के लिए व्यक्तिगत फिजियोथेरेपी सत्र।</p>
+        <div class="card-footer">
+          <button class="btn-cta call-btn" data-service="होम फिजियोथेरेपी">कॉल</button>
+          <button class="btn-cta request-btn" data-service="होम फिजियोथेरेपी">बैक कॉल</button>
+        </div>
+      </div> 
+
+      <div class="product-card">
+        <div class="product-media">
+          <img class="service-image" src="images/icu.png" alt="होम आईसीयू">
+        </div>
+        <div class="product-meta"><span class="price">₹1,499 से</span><span class="badge">उन्नत</span></div>
+        <h3>होम आईसीयू</h3>
+        <p>घर पर उन्नत क्रिटिकल केयर सेटअप और मॉनिटरिंग।</p>
+        <div class="card-footer">
+          <button class="btn-cta call-btn" data-service="होम आईसीयू">कॉल</button>
+          <button class="btn-cta request-btn" data-service="होम आईसीयू">बैक कॉल</button>
+        </div>
+      </div> 
+
+      <div class="product-card">
+        <div class="product-media">
+          <img class="service-image" src="images/equipment.png" alt="मेडिकल उपकरण किराया">
+        </div>
+        <div class="product-meta"><span class="price">₹299 से</span><span class="badge">किराया</span></div>
+        <h3>मेडिकल उपकरण किराया</h3>
+        <p>ऑक्सीजन कंसंट्रेटर, व्हीलचेयर आदि उच्च गुणवत्ता वाले मेडिकल उपकरण किराए पर लें।</p>
+        <div class="card-footer">
+          <button class="btn-cta call-btn" data-service="मेडिकल उपकरण किराया">कॉल</button>
+          <button class="btn-cta request-btn" data-service="मेडिकल उपकरण किराया">बैक कॉल</button>
+        </div>
+      </div> 
+
+      <div class="product-card">
+        <div class="product-media">
+          <img class="service-image" src="images/elderly.png" alt="वरिष्ठ नागरिक देखभाल">
+        </div>
+        <div class="product-meta"><span class="price">₹399 से</span><span class="badge">सहायता</span></div>
+        <h3>वरिष्ठ नागरिक देखभाल</h3>
+        <p>वरिष्ठों के लिए व्यापक सहायता और साथ।</p>
+        <div class="card-footer">
+          <button class="btn-cta call-btn" data-service="वरिष्ठ नागरिक देखभाल">कॉल</button>
+          <button class="btn-cta request-btn" data-service="वरिष्ठ नागरिक देखभाल">बैक कॉल</button>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; २०२६ होम मेडिकेयर। सर्वाधिकार सुरक्षित।<br>
+      <small id="lastUpdated" style="display:block;margin-top:6px;color:rgba(15,23,36,0.6);font-weight:600">अंतिम अद्यतन: </small>
+    </p>
+  </footer>
+
+
+
+  <script src="scripts.js"></script>
+</body>
+</html>

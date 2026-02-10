@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Home Medicare - Home Care Services</title> 
+</head>
+<body data-locale="en-US">
+  <header class="site-header">
+    <div class="site-left">
+      <img src="logo.jpg" alt="Home Medicare Logo" class="site-logo" />
+      <div class="site-title">
+        <h1>Home Medicare</h1>
+        <p>Quality home healthcare &amp; comfort</p>
+      </div>
+    </div>
+    <div class="site-actions">
+      <button class="lang-link" onclick="location.href='hindi.html'">हिंदी</button>
+      <button class="contact-btn" onclick="window.contactUs(null, 'General Inquiry')">Contact</button>
+    </div>
+  </header>
+
+  <section class="hero container" aria-hidden="false">
+    <div class="left">
+      <h1>Professional Home Care at your home</h1>
+      <p>Expert nursing, bedside care, advanced support — all in the comfort of your home.</p>
+      <div class="hero-cta">
+        <button class="btn-primary" onclick="location.href='#services'">Explore Services</button>
+        <button class="btn-outline" onclick="window.contactUs(null, 'General Inquiry')">Request Callback</button>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <img src="images/mother_baby.png" width="100%" height="100%" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <rect width="100%" height="100%" fill="#fff" rx="8"></rect>
+        <g transform="translate(40,20)" fill="#b97b7b" opacity="0.95">
+          <circle cx="80" cy="100" r="70"></circle>
+        </g>
+      </img>
+    </div>
+  </section>
+
+  <div class="container" id="services">
+    <h2 style="text-align:center; color:#2c7be5;">Our Services</h2>
+    <div class="services">
+      <div class="product-card">
+        <div class="product-media">
+          <img class="service-image" src="images/bedside.png" alt="Bedside Caregiving">
+        </div>
+        <div class="product-meta"><span class="price">From ₹499</span><span class="badge">Popular</span></div>
+        <h3>Bedside Caregiving</h3>
+        <p>Compassionate personal care and assistance at your bedside.</p>
+        <div class="card-footer">
+          <button class="btn-cta call-btn" data-service="Bedside Caregiving">Call</button>
+          <button class="btn-cta request-btn" data-service="Bedside Caregiving">Request Callback</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-media">
+          <img class="service-image" src="images/nursing.png" alt="Home Nursing Care">
+        </div>
+        <div class="product-meta"><span class="price">From ₹699</span><span class="badge">Trusted</span></div>
+        <h3>Home Nursing Care</h3>
+        <p>Professional nursing services delivered in the comfort of your home.</p>
+        <div class="card-footer">
+          <button class="btn-cta call-btn" data-service="Home Nursing Care">Call</button>
+          <button class="btn-cta request-btn" data-service="Home Nursing Care">Request Callback</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-media">
+          <img class="service-image" src="images/physio.png" alt="Home Physiotherapy">
+        </div>
+        <div class="product-meta"><span class="price">From ₹599</span><span class="badge">Care</span></div>
+        <h3>Home Physiotherapy</h3>
+        <p>Personalized physiotherapy sessions to aid recovery and mobility.</p>
+        <div class="card-footer">
+          <button class="btn-cta call-btn" data-service="Home Physiotherapy">Call</button>
+          <button class="btn-cta request-btn" data-service="Home Physiotherapy">Request Callback</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-media">
+          <img class="service-image" src="images/icu.png" alt="Home ICU">
+        </div>
+        <div class="product-meta"><span class="price">From ₹1,499</span><span class="badge">Advanced</span></div>
+        <h3>Home ICU</h3>
+        <p>Advanced critical care setup and monitoring at home.</p>
+        <div class="card-footer">
+          <button class="btn-cta call-btn" data-service="Home ICU">Call</button>
+          <button class="btn-cta request-btn" data-service="Home ICU">Request Callback</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-media">
+          <img class="service-image" src="images/equipment.png" alt="Medical Equipment Rental">
+        </div>
+        <div class="product-meta"><span class="price">From ₹299</span><span class="badge">Rentals</span></div>
+        <h3>Medical Equipment Rental</h3>
+        <p>Rent high-quality medical equipment like oxygen concentrators, wheelchairs, and more.</p>
+        <div class="card-footer">
+          <button class="btn-cta call-btn" data-service="Medical Equipment Rental">Call</button>
+          <button class="btn-cta request-btn" data-service="Medical Equipment Rental">Request Callback</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-media">
+          <img class="service-image" src="images/elderly.png" alt="Elderly Care">
+        </div>
+        <div class="product-meta"><span class="price">From ₹399</span><span class="badge">Support</span></div>
+        <h3>Elderly Care</h3>
+        <p>Comprehensive support and companionship for seniors.</p>
+        <div class="card-footer">
+          <button class="btn-cta call-btn" data-service="Elderly Care">Call</button>
+          <button class="btn-cta request-btn" data-service="Elderly Care">Request Callback</button>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Home Medicare. All rights reserved.<br>
+      <small id="lastUpdated" style="display:block;margin-top:6px;color:rgba(15,23,36,0.6);font-weight:600">Last updated: </small>
+    </p>
+  </footer>
+
+
+
+  <script src="scripts.js"></script>
+</body> 
+</html>

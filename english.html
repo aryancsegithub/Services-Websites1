@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#1e40af">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <title>Home Medicare - Home Care Services</title> 
+  <title>Home Medicare - Professional Home Care Services</title> 
 </head>
 <body data-locale="en-US">
   <header class="site-header">
@@ -13,125 +14,270 @@
       <img src="logo.jpg" alt="Home Medicare Logo" class="site-logo" />
       <div class="site-title">
         <h1>Home Medicare</h1>
-        <p>Quality home healthcare &amp; comfort</p>
+        <p>Quality Care at Home</p>
       </div>
     </div>
     <div class="site-actions">
       <button class="lang-link" onclick="location.href='hindi.html'">हिंदी</button>
       <button class="contact-btn" onclick="window.contactUs(null, 'General Inquiry')">Contact</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </header>
 
-  <section class="hero container" aria-hidden="false">
+  <nav class="mobile-menu" id="mobileMenu">
+    <button onclick="document.location.href='#services'">Services</button>
+    <button onclick="document.location.href='#about'">About Us</button>
+    <button onclick="document.location.href='#testimonials'">Testimonials</button>
+    <button onclick="document.location.href='#faq'">FAQ</button>
+    <button onclick="window.contactUs(null, 'General Inquiry')">Contact Us</button>
+  </nav>
+
+  <section class="hero container">
     <div class="left">
-      <h1>Professional Home Care at your home</h1>
-      <p>Expert nursing, bedside care, advanced support — all in the comfort of your home.</p>
+      <h1>Professional Home Care at Your Home</h1>
+      <p>Expert nursing, bedside care, and advanced medical support — all in the comfort and safety of your home. Compassionate care professionals available 24/7.</p>
       <div class="hero-cta">
         <button class="btn-primary" onclick="location.href='#services'">Explore Services</button>
         <button class="btn-outline" onclick="window.contactUs(null, 'General Inquiry')">Request Callback</button>
       </div>
     </div>
-    <div class="hero-visual" aria-hidden="true">
-      <img src="images/mother_baby.png" width="100%" height="100%" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-        <rect width="100%" height="100%" fill="#fff" rx="8"></rect>
-        <g transform="translate(40,20)" fill="#b97b7b" opacity="0.95">
-          <circle cx="80" cy="100" r="70"></circle>
-        </g>
-      </img>
+    <div class="hero-visual">
+      👨‍⚕️
     </div>
   </section>
 
-  <div class="container" id="services">
-    <h2 style="text-align:center; color:#2c7be5;">Our Services</h2>
+  <section class="container" id="services">
+    <h2>Our Premium Services</h2>
     <div class="services">
       <div class="product-card">
-        <div class="product-media">
-          <img class="service-image" src="images/bedside.png" alt="Bedside Caregiving">
+        <div class="product-media">🏥</div>
+        <div class="product-meta">
+          <span class="price">From ₹499/day</span>
+          <span class="badge">Popular</span>
         </div>
-        <div class="product-meta"><span class="price">From ₹499</span><span class="badge">Popular</span></div>
         <h3>Bedside Caregiving</h3>
-        <p>Compassionate personal care and assistance at your bedside.</p>
+        <p>Compassionate personal care and assistance with daily activities. Our trained caregivers provide dignified support.</p>
         <div class="card-footer">
           <button class="btn-cta call-btn" data-service="Bedside Caregiving">Call</button>
-          <button class="btn-cta request-btn" data-service="Bedside Caregiving">Request Callback</button>
+          <button class="btn-cta request-btn" data-service="Bedside Caregiving">Request</button>
         </div>
       </div>
 
       <div class="product-card">
-        <div class="product-media">
-          <img class="service-image" src="images/nursing.png" alt="Home Nursing Care">
+        <div class="product-media">⚕️</div>
+        <div class="product-meta">
+          <span class="price">From ₹699/day</span>
+          <span class="badge">Trusted</span>
         </div>
-        <div class="product-meta"><span class="price">From ₹699</span><span class="badge">Trusted</span></div>
         <h3>Home Nursing Care</h3>
-        <p>Professional nursing services delivered in the comfort of your home.</p>
+        <p>Professional nursing services with experienced RNs and LNs. Medications, dressing changes, and health monitoring included.</p>
         <div class="card-footer">
           <button class="btn-cta call-btn" data-service="Home Nursing Care">Call</button>
-          <button class="btn-cta request-btn" data-service="Home Nursing Care">Request Callback</button>
+          <button class="btn-cta request-btn" data-service="Home Nursing Care">Request</button>
         </div>
       </div>
 
       <div class="product-card">
-        <div class="product-media">
-          <img class="service-image" src="images/physio.png" alt="Home Physiotherapy">
+        <div class="product-media">🧘</div>
+        <div class="product-meta">
+          <span class="price">From ₹599/session</span>
+          <span class="badge">Recovery</span>
         </div>
-        <div class="product-meta"><span class="price">From ₹599</span><span class="badge">Care</span></div>
         <h3>Home Physiotherapy</h3>
-        <p>Personalized physiotherapy sessions to aid recovery and mobility.</p>
+        <p>Personalized rehabilitation sessions to restore mobility and strength. Post-surgery recovery and pain management.</p>
         <div class="card-footer">
           <button class="btn-cta call-btn" data-service="Home Physiotherapy">Call</button>
-          <button class="btn-cta request-btn" data-service="Home Physiotherapy">Request Callback</button>
+          <button class="btn-cta request-btn" data-service="Home Physiotherapy">Request</button>
         </div>
       </div>
 
       <div class="product-card">
-        <div class="product-media">
-          <img class="service-image" src="images/icu.png" alt="Home ICU">
+        <div class="product-media">🚑</div>
+        <div class="product-meta">
+          <span class="price">From ₹1,499/day</span>
+          <span class="badge">Advanced</span>
         </div>
-        <div class="product-meta"><span class="price">From ₹1,499</span><span class="badge">Advanced</span></div>
-        <h3>Home ICU</h3>
-        <p>Advanced critical care setup and monitoring at home.</p>
+        <h3>Home ICU Care</h3>
+        <p>Critical care setup with ventilators, monitors, and 24/7 nursing. For serious conditions requiring intensive monitoring.</p>
         <div class="card-footer">
-          <button class="btn-cta call-btn" data-service="Home ICU">Call</button>
-          <button class="btn-cta request-btn" data-service="Home ICU">Request Callback</button>
+          <button class="btn-cta call-btn" data-service="Home ICU Care">Call</button>
+          <button class="btn-cta request-btn" data-service="Home ICU Care">Request</button>
         </div>
       </div>
 
       <div class="product-card">
-        <div class="product-media">
-          <img class="service-image" src="images/equipment.png" alt="Medical Equipment Rental">
+        <div class="product-media">🦽</div>
+        <div class="product-meta">
+          <span class="price">From ₹299/month</span>
+          <span class="badge">Rentals</span>
         </div>
-        <div class="product-meta"><span class="price">From ₹299</span><span class="badge">Rentals</span></div>
         <h3>Medical Equipment Rental</h3>
-        <p>Rent high-quality medical equipment like oxygen concentrators, wheelchairs, and more.</p>
+        <p>High-quality equipment rental: oxygen concentrators, wheelchairs, hospital beds, nebulizers, and more.</p>
         <div class="card-footer">
-          <button class="btn-cta call-btn" data-service="Medical Equipment Rental">Call</button>
-          <button class="btn-cta request-btn" data-service="Medical Equipment Rental">Request Callback</button>
+          <button class="btn-cta call-btn" data-service="Medical Equipment">Call</button>
+          <button class="btn-cta request-btn" data-service="Medical Equipment">Request</button>
         </div>
       </div>
 
       <div class="product-card">
-        <div class="product-media">
-          <img class="service-image" src="images/elderly.png" alt="Elderly Care">
+        <div class="product-media">👴</div>
+        <div class="product-meta">
+          <span class="price">From ₹399/day</span>
+          <span class="badge">Support</span>
         </div>
-        <div class="product-meta"><span class="price">From ₹399</span><span class="badge">Support</span></div>
         <h3>Elderly Care</h3>
-        <p>Comprehensive support and companionship for seniors.</p>
+        <p>Specialized care for seniors including companionship, mobility assistance, meal preparation, and medication reminders.</p>
         <div class="card-footer">
           <button class="btn-cta call-btn" data-service="Elderly Care">Call</button>
-          <button class="btn-cta request-btn" data-service="Elderly Care">Request Callback</button>
+          <button class="btn-cta request-btn" data-service="Elderly Care">Request</button>
         </div>
-      </div> 
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="container" id="testimonials">
+    <section class="testimonials">
+      <h2>What Our Patients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Home Medicare provided exceptional care for my mother after her surgery. The nurses were professional and compassionate."</p>
+          <div class="testimonial-author">Rajesh Kumar</div>
+          <div class="testimonial-role">Patient Family</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"The physiotherapy sessions helped me recover my mobility faster than expected. Highly recommended!"</p>
+          <div class="testimonial-author">Priya Singh</div>
+          <div class="testimonial-role">Post-Surgery Patient</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"My father receives elderly care from Home Medicare. The caregivers are trained, patient, and very attentive."</p>
+          <div class="testimonial-author">Amit Patel</div>
+          <div class="testimonial-role">Son of Patient</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"I needed emergency ICU setup at home. Their team was quick, professional, and supportive throughout my recovery."</p>
+          <div class="testimonial-author">Mrs. Sharma</div>
+          <div class="testimonial-role">ICU Care Patient</div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section class="container" id="about">
+    <section class="about">
+      <div class="about-content">
+        <h3>About Home Medicare</h3>
+        <p>Home Medicare is India's leading provider of professional home healthcare services. With over 5,000+ satisfied patients and a network of certified medical professionals, we bring hospital-quality care to your doorstep.</p>
+        <p>Our mission is to make quality healthcare accessible, affordable, and comfortable for everyone. We believe that recovery is faster at home surrounded by loved ones.</p>
+        <ul class="about-features">
+          <li>Certified & Experienced Medical Professionals</li>
+          <li>24/7 Availability & Emergency Support</li>
+          <li>Affordable & Transparent Pricing</li>
+          <li>Quality Care, Professional Service</li>
+          <li>Flexible Packages for Your Needs</li>
+        </ul>
+      </div>
+      <div class="about-image">❤️</div>
+    </section>
+  </section>
+
+  <section class="container" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>How do I book a service?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Booking is easy! Call us on +91-7587-183033 or click the "Request Callback" button on our website. Our team will discuss your needs and arrange the perfect care package for you.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>Are your caregivers certified?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, all our nurses, caregivers, and physiotherapists are certified, trained, and background-verified. We maintain the highest professional standards in healthcare.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>What are your service hours?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>We provide 24/7 services. Whether you need day care, night care, or full-time round-the-clock support, we have flexible packages to meet your schedule.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>What areas do you service?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>We serve major cities and surrounding areas across India. Contact us with your location details, and we'll confirm availability and arrange services within 24 hours.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>Can I request a specific caregiver?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely! If you find a caregiver you're comfortable with, we do our best to maintain continuity. We believe in building trust and long-term relationships with families.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>Do you accept insurance?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>We work with most major health insurance providers. Our billing team can help you understand coverage and claims. Ask about insurance details when booking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2026 Home Medicare. All rights reserved.<br>
-      <small id="lastUpdated" style="display:block;margin-top:6px;color:rgba(15,23,36,0.6);font-weight:600">Last updated: </small>
-    </p>
+    <p>&copy; 2026 Home Medicare. All rights reserved.</p>
+    <p>Your health, our priority. Professional home healthcare services across India.</p>
+    <small id="lastUpdated">Last updated: </small>
   </footer>
 
-
-
   <script src="scripts.js"></script>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('show');
+      });
+    }
+    
+    // Close menu when a link is clicked
+    const menuButtons = mobileMenu.querySelectorAll('button');
+    menuButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        mobileMenu.classList.remove('show');
+      });
+    });
+  </script>
 </body> 
 </html>

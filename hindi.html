@@ -3,135 +3,281 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#1e40af">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <title>होम मेडिकेयर - होम केयर सेवाएं</title>
+  <title>होम मेडिकेयर - व्यावसायिक होम केयर सेवाएं</title>
 </head>
 <body data-locale="hi-IN">
   <header class="site-header">
     <div class="site-left">
-      <img src="logo.jpg" alt="Home Medicare Logo" class="site-logo" />
+      <img src="logo.jpg" alt="होम मेडिकेयर लोगो" class="site-logo" />
       <div class="site-title">
         <h1>होम मेडिकेयर</h1>
-        <p>घर पर देखभाल और आराम</p>
+        <p>घर पर गुणवत्ता देखभाल</p>
       </div>
     </div>
     <div class="site-actions">
       <button class="lang-link" onclick="location.href='english.html'">English</button>
       <button class="contact-btn" onclick="window.contactUs(null, 'सामान्य प्रश्न')">संपर्क</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </header>
 
-  <section class="hero container" aria-hidden="false">
+  <nav class="mobile-menu" id="mobileMenu">
+    <button onclick="document.location.href='#services'">सेवाएं</button>
+    <button onclick="document.location.href='#about'">हमारे बारे में</button>
+    <button onclick="document.location.href='#testimonials'">प्रशंसापत्र</button>
+    <button onclick="document.location.href='#faq'">सामान्य प्रश्न</button>
+    <button onclick="window.contactUs(null, 'सामान्य प्रश्न')">हमसे संपर्क करें</button>
+  </nav>
+
+  <section class="hero container">
     <div class="left">
-      <h1>पेशेवर होम केयर, गरिमा के साथ</h1>
-      <p>नर्सिंग, बेडसाइड केयर और उन्नत सहायता — घर के आराम में।</p>
+      <h1>व्यावसायिक होम केयर, गरिमा के साथ</h1>
+      <p>पेशेवर नर्सिंग, बेडसाइड केयर और उन्नत चिकित्सा सहायता — घर के आराम और सुरक्षा में। 24/7 देखभाल उपलब्ध।</p>
       <div class="hero-cta">
         <button class="btn-primary" onclick="location.href='#services'">सेवाओं का अन्वेषण करें</button>
         <button class="btn-outline" onclick="window.contactUs(null, 'सामान्य प्रश्न')">बैक कॉल का अनुरोध</button>
       </div>
     </div>
-    <div class="hero-visual" aria-hidden="true">
-      <img src="images/mother_baby.png" width="100%" height="100%" viewBox="0 0 600 400" >
-        <rect width="100%" height="100%" fill="#fff" rx="8"></rect>
-        <g transform="translate(40,20)" fill="#b97b7b" opacity="0.95">
-          <circle cx="80" cy="100" r="70"></circle>
-        </g>
-      </img>
+    <div class="hero-visual">
+      👨‍⚕️
     </div>
   </section>
 
-  <div class="container" id="services">
-    <h2 style="text-align:center; color:#2c7be5;">हमारी सेवाएं</h2>
+  <section class="container" id="services">
+    <h2>हमारी प्रीमियम सेवाएं</h2>
     <div class="services">
       <div class="product-card">
-        <div class="product-media">
-          <img class="service-image" src="images/bedside.png" alt="बेडसाइड देखभाल">
+        <div class="product-media">🏥</div>
+        <div class="product-meta">
+          <span class="price">₹499/दिन से</span>
+          <span class="badge">लोकप्रिय</span>
         </div>
-        <div class="product-meta"><span class="price">₹499 से</span><span class="badge">लोकप्रिय</span></div>
         <h3>बेडसाइड देखभाल</h3>
-        <p>बेडसाइड पर दयालु व्यक्तिगत देखभाल और सहायता।</p>
+        <p>दयालु व्यक्तिगत देखभाल और दैनिक गतिविधियों में सहायता। हमारे प्रशिक्षित देखभालकर्ता सम्मानजनक सहायता प्रदान करते हैं।</p>
         <div class="card-footer">
-          <button class="btn-cta call-btn" data-service="बेडसाइड देखभाल">कॉल</button>
-          <button class="btn-cta request-btn" data-service="बेडसाइड देखभाल">बैक कॉल</button>
+          <button class="btn-cta call-btn" data-service="बेडसाइड देखभाल">कॉल करें</button>
+          <button class="btn-cta request-btn" data-service="बेडसाइड देखभाल">अनुरोध</button>
         </div>
-      </div> 
+      </div>
 
       <div class="product-card">
-        <div class="product-media">
-          <img class="service-image" src="images/nursing.png" alt="होम नर्सिंग केयर">
+        <div class="product-media">⚕️</div>
+        <div class="product-meta">
+          <span class="price">₹699/दिन से</span>
+          <span class="badge">विश्वसनीय</span>
         </div>
-        <div class="product-meta"><span class="price">₹699 से</span><span class="badge">विश्वसनीय</span></div>
         <h3>होम नर्सिंग केयर</h3>
-        <p>घर के आराम में पेशेवर नर्सिंग सेवाएं।</p>
+        <p>अनुभवी RN और LN के साथ व्यावसायिक नर्सिंग सेवाएं। दवाइयां, ड्रेसिंग और स्वास्थ्य निगरानी शामिल।</p>
         <div class="card-footer">
-          <button class="btn-cta call-btn" data-service="होम नर्सिंग केयर">कॉल</button>
-          <button class="btn-cta request-btn" data-service="होम नर्सिंग केयर">बैक कॉल</button>
+          <button class="btn-cta call-btn" data-service="होम नर्सिंग केयर">कॉल करें</button>
+          <button class="btn-cta request-btn" data-service="होम नर्सिंग केयर">अनुरोध</button>
         </div>
-      </div> 
+      </div>
 
       <div class="product-card">
-        <div class="product-media">
-          <img class="service-image" src="images/physio.png" alt="होम फिजियोथेरेपी">
+        <div class="product-media">🧘</div>
+        <div class="product-meta">
+          <span class="price">₹599/सत्र से</span>
+          <span class="badge">पुनरावृत्ति</span>
         </div>
-        <div class="product-meta"><span class="price">₹599 से</span><span class="badge">केयर</span></div>
         <h3>होम फिजियोथेरेपी</h3>
-        <p>रिकवरी और गतिशीलता के लिए व्यक्तिगत फिजियोथेरेपी सत्र।</p>
+        <p>गतिविधि और शक्ति बहाल करने के लिए व्यक्तिगत पुनर्वास सत्र। शल्य चिकित्सा के बाद की पुनरावृत्ति और दर्द प्रबंधन।</p>
         <div class="card-footer">
-          <button class="btn-cta call-btn" data-service="होम फिजियोथेरेपी">कॉल</button>
-          <button class="btn-cta request-btn" data-service="होम फिजियोथेरेपी">बैक कॉल</button>
+          <button class="btn-cta call-btn" data-service="होम फिजियोथेरेपी">कॉल करें</button>
+          <button class="btn-cta request-btn" data-service="होम फिजियोथेरेपी">अनुरोध</button>
         </div>
-      </div> 
+      </div>
 
       <div class="product-card">
-        <div class="product-media">
-          <img class="service-image" src="images/icu.png" alt="होम आईसीयू">
+        <div class="product-media">🚑</div>
+        <div class="product-meta">
+          <span class="price">₹1,499/दिन से</span>
+          <span class="badge">उन्नत</span>
         </div>
-        <div class="product-meta"><span class="price">₹1,499 से</span><span class="badge">उन्नत</span></div>
-        <h3>होम आईसीयू</h3>
-        <p>घर पर उन्नत क्रिटिकल केयर सेटअप और मॉनिटरिंग।</p>
+        <h3>होम ICU केयर</h3>
+        <p>वेंटिलेटर, मॉनिटर और 24/7 नर्सिंग के साथ क्रिटिकल केयर सेटअप। गंभीर स्थितियों के लिए गहन निगरानी।</p>
         <div class="card-footer">
-          <button class="btn-cta call-btn" data-service="होम आईसीयू">कॉल</button>
-          <button class="btn-cta request-btn" data-service="होम आईसीयू">बैक कॉल</button>
+          <button class="btn-cta call-btn" data-service="होम ICU केयर">कॉल करें</button>
+          <button class="btn-cta request-btn" data-service="होम ICU केयर">अनुरोध</button>
         </div>
-      </div> 
+      </div>
 
       <div class="product-card">
-        <div class="product-media">
-          <img class="service-image" src="images/equipment.png" alt="मेडिकल उपकरण किराया">
+        <div class="product-media">🦽</div>
+        <div class="product-meta">
+          <span class="price">₹299/महीना से</span>
+          <span class="badge">किराया</span>
         </div>
-        <div class="product-meta"><span class="price">₹299 से</span><span class="badge">किराया</span></div>
-        <h3>मेडिकल उपकरण किराया</h3>
-        <p>ऑक्सीजन कंसंट्रेटर, व्हीलचेयर आदि उच्च गुणवत्ता वाले मेडिकल उपकरण किराए पर लें।</p>
+        <h3>चिकित्सा उपकरण किराया</h3>
+        <p>उच्च गुणवत्ता वाले उपकरण किराया: ऑक्सीजन कंसंट्रेटर, व्हीलचेयर, अस्पताल के बिस्तर, नेबुलाइजर और बहुत कुछ।</p>
         <div class="card-footer">
-          <button class="btn-cta call-btn" data-service="मेडिकल उपकरण किराया">कॉल</button>
-          <button class="btn-cta request-btn" data-service="मेडिकल उपकरण किराया">बैक कॉल</button>
+          <button class="btn-cta call-btn" data-service="चिकित्सा उपकरण">कॉल करें</button>
+          <button class="btn-cta request-btn" data-service="चिकित्सा उपकरण">अनुरोध</button>
         </div>
-      </div> 
+      </div>
 
       <div class="product-card">
-        <div class="product-media">
-          <img class="service-image" src="images/elderly.png" alt="वरिष्ठ नागरिक देखभाल">
+        <div class="product-media">👴</div>
+        <div class="product-meta">
+          <span class="price">₹399/दिन से</span>
+          <span class="badge">सहायता</span>
         </div>
-        <div class="product-meta"><span class="price">₹399 से</span><span class="badge">सहायता</span></div>
         <h3>वरिष्ठ नागरिक देखभाल</h3>
-        <p>वरिष्ठों के लिए व्यापक सहायता और साथ।</p>
+        <p>सीनियर नागरिकों के लिए विशेष देखभाल जिसमें साथ, गतिविधि सहायता, भोजन तैयारी और दवाई के स्मरण शामिल हैं।</p>
         <div class="card-footer">
-          <button class="btn-cta call-btn" data-service="वरिष्ठ नागरिक देखभाल">कॉल</button>
-          <button class="btn-cta request-btn" data-service="वरिष्ठ नागरिक देखभाल">बैक कॉल</button>
+          <button class="btn-cta call-btn" data-service="वरिष्ठ नागरिक देखभाल">कॉल करें</button>
+          <button class="btn-cta request-btn" data-service="वरिष्ठ नागरिक देखभाल">अनुरोध</button>
         </div>
-      </div> 
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="container" id="testimonials">
+    <section class="testimonials">
+      <h2>हमारे मरीज क्या कहते हैं</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"होम मेडिकेयर ने मेरी माँ की शल्य चिकित्सा के बाद असाधारण देखभाल प्रदान की। नर्सें पेशेवर और करुणामय थीं।"</p>
+          <div class="testimonial-author">राजेश कुमार</div>
+          <div class="testimonial-role">मरीज का परिवार</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"फिजियोथेरेपी सत्रों ने मुझे अपनी गतिविधि तेजी से बहाल करने में मदद की। बहुत अनुशंसित!"</p>
+          <div class="testimonial-author">प्रिया सिंह</div>
+          <div class="testimonial-role">शल्य चिकित्सा के बाद मरीज</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"मेरे पिता को होम मेडिकेयर से वरिष्ठ नागरिक देखभाल मिलती है। देखभालकर्ता प्रशिक्षित, धैर्यवान और बहुत ध्यान दिए हुए हैं।"</p>
+          <div class="testimonial-author">अमित पटेल</div>
+          <div class="testimonial-role">मरीज के बेटे</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"मुझे घर पर आपातकालीन ICU सेटअप की जरूरत थी। उनकी टीम तेजी से, पेशेवर और पूरे समय सहायक थी।"</p>
+          <div class="testimonial-author">श्रीमती शर्मा</div>
+          <div class="testimonial-role">ICU केयर मरीज</div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section class="container" id="about">
+    <section class="about">
+      <div class="about-content">
+        <h3>होम मेडिकेयर के बारे में</h3>
+        <p>होम मेडिकेयर भारत की प्रमुख व्यावसायिक होम हेल्थकेयर सेवाएं प्रदान करने वाली कंपनी है। 5,000+ संतुष्ट मरीजों और प्रमाणित चिकित्सा पेशेवरों के नेटवर्क के साथ, हम आपके दरवाजे पर अस्पताल-गुणवत्ता की देखभाल लाते हैं।</p>
+        <p>हमारा मिशन गुणवत्ता हेल्थकेयर को सुलभ, सस्ती और आरामदायक बनाना है। हम मानते हैं कि प्रियजनों के साथ घर पर पुनरावृत्ति तेजी से होती है।</p>
+        <ul class="about-features">
+          <li>प्रमाणित और अनुभवी चिकित्सा पेशेवर</li>
+          <li>24/7 उपलब्धता और आपातकालीन सहायता</li>
+          <li>किफायती और पारदर्शी मूल्य निर्धारण</li>
+          <li>गुणवत्ता देखभाल, व्यावसायिक सेवा</li>
+          <li>आपकी आवश्यकताओं के लिए लचीली पैकेजें</li>
+        </ul>
+      </div>
+      <div class="about-image">❤️</div>
+    </section>
+  </section>
+
+  <section class="container" id="faq">
+    <h2>बार-बार पूछे जाने वाले प्रश्न</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>मैं एक सेवा कैसे बुक करूं?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>बुकिंग आसान है! +91-7587-183033 पर कॉल करें या हमारी वेबसाइट पर "बैक कॉल का अनुरोध" बटन क्लिक करें। हमारी टीम आपकी आवश्यकताओं की चर्चा करेगी और आपके लिए परफेक्ट केयर पैकेज व्यवस्थित करेगी।</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>क्या आपके देखभालकर्ता प्रमाणित हैं?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>हां, हमारे सभी नर्सें, देखभालकर्ताएं और फिजियोथेरेपिस्ट प्रमाणित, प्रशिक्षित और पृष्ठभूमि-सत्यापित हैं। हम स्वास्थ्यसेवा में उच्चतम व्यावसायिक मानकों को बनाए रखते हैं।</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>आपके सेवा के समय क्या हैं?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>हम 24/7 सेवाएं प्रदान करते हैं। चाहे आपको दिन की देखभाल, रात की देखभाल, या पूरा समय राउंड-द-क्लॉक सहायता की आवश्यकता हो, हमारे पास आपके शेड्यूल को पूरा करने के लिए लचीली पैकेजें हैं।</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>आप कौन से क्षेत्रों में सेवा देते हैं?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>हम भारत भर के प्रमुख शहरों और आसपास के क्षेत्रों में सेवा देते हैं। आपके स्थान के विवरण के साथ हमसे संपर्क करें, और हम 24 घंटे के भीतर उपलब्धता की पुष्टि करेंगे।</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>क्या मैं एक विशिष्ट देखभालकर्ता का अनुरोध कर सकता हूं?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>बिल्कुल! यदि आप किसी देखभालकर्ता के साथ आरामदायक हैं, तो हम निरंतरता बनाए रखने का सर्वश्रेष्ठ प्रयास करते हैं। हम परिवारों के साथ विश्वास और दीर्घकालीन संबंध बनाने में विश्वास करते हैं।</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>क्या आप बीमा स्वीकार करते हैं?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>हम अधिकांश प्रमुख स्वास्थ्य बीमा प्रदाताओं के साथ काम करते हैं। हमारी बिलिंग टीम आपको कवरेज और दावों को समझने में मदद कर सकती है। बुकिंग के समय बीमा विवरण के बारे में पूछें।</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; २०२६ होम मेडिकेयर। सर्वाधिकार सुरक्षित।<br>
-      <small id="lastUpdated" style="display:block;margin-top:6px;color:rgba(15,23,36,0.6);font-weight:600">अंतिम अद्यतन: </small>
-    </p>
+    <p>&copy; २०२६ होम मेडिकेयर। सर्वाधिकार सुरक्षित।</p>
+    <p>आपका स्वास्थ्य, हमारी प्राथमिकता। भारत भर में व्यावसायिक होम हेल्थकेयर सेवाएं।</p>
+    <small id="lastUpdated">अंतिम अद्यतन: </small>
   </footer>
 
-
-
   <script src="scripts.js"></script>
+  <script>
+    // मोबाइल मेनू टॉगल
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('show');
+      });
+    }
+    
+    // जब कोई लिंक क्लिक हो तो मेनू बंद करें
+    const menuButtons = mobileMenu.querySelectorAll('button');
+    menuButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        mobileMenu.classList.remove('show');
+      });
+    });
+  </script>
 </body>
 </html>

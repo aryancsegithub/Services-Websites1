@@ -3,28 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#1e40af">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <title>Home Medicare - Choose Language</title>
+  <title>Home Medicare - Choose Your Language</title>
+  <style>
+    .language-selector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1e40af 0%, #0d9488 100%);
+      padding: 20px;
+    }
+    
+    .lang-content {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+    
+    .lang-logo {
+      height: 80px;
+      width: auto;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    
+    .lang-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #1e40af;
+      margin: 16px 0 8px;
+      font-weight: 700;
+    }
+    
+    .lang-content .subtitle {
+      color: #64748b;
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    
+    .lang-buttons {
+      display: flex;
+      gap: 12px;
+      flex-direction: column;
+    }
+    
+    .lang-btn {
+      padding: 14px 24px;
+      border-radius: 10px;
+      border: 0;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .lang-btn-en {
+      background: linear-gradient(135deg, #1e40af, #2563eb);
+      color: white;
+    }
+    
+    .lang-btn-en:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
+    }
+    
+    .lang-btn-hi {
+      background: linear-gradient(135deg, #f59e0b, #f97316);
+      color: white;
+    }
+    
+    .lang-btn-hi:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+    }
+    
+    @media (max-width: 600px) {
+      .lang-content {
+        padding: 24px 16px;
+      }
+      
+      .lang-content h1 {
+        font-size: 1.5rem;
+      }
+      
+      .lang-btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+      }
+      
+      .lang-logo {
+        height: 60px;
+      }
+    }
+  </style>
 </head>
 <body data-locale="en-US">
-  <div class="container" style="display:flex;gap:24px;align-items:center;justify-content:space-between;">
-    <div style="flex:1;">
-      <img src="logo.jpg" alt="Home Medicare Logo" class="site-logo" />
-      <h1 style="font-family:'Playfair Display', serif;">Welcome to Home Medicare</h1>
-      <p>Please select your preferred language / कृपया अपनी पसंदीदा भाषा चुनें</p>
-      <div style="display:flex;gap:12px;justify-content:flex-start;">
-        <a href="english.html" class="btn btn-primary" style="flex:1;min-width:140px;max-width:250px;background:linear-gradient(90deg,#2ecc71,#27ae60);color:#fff">English</a>
-        <a href="hindi.html" class="btn btn-outline" style="flex:1;min-width:140px;max-width:250px;background:linear-gradient(180deg,#FFEB3B,#FFED4E);color:#0f1724">हिंदी</a>
+  <div class="language-selector">
+    <div class="lang-content">
+      <img src="logo.jpg" alt="Home Medicare Logo" class="lang-logo" />
+      <h1>Home Medicare</h1>
+      <p class="subtitle">Professional Home Care Services</p>
+      <p class="subtitle" style="color: #94a3b8; font-size: 0.85rem;">Please select your preferred language</p>
+      <div class="lang-buttons">
+        <a href="english.html" class="lang-btn lang-btn-en">🇮🇳 English</a>
+        <a href="hindi.html" class="lang-btn lang-btn-hi">🇮🇳 हिंदी (Hindi)</a>
       </div>
     </div>
-    <div style="flex:1;max-width:400px;">
-      <img src="homecare bg.png" alt="Home Care Services" style="width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(15,23,36,0.1);mask-image:linear-gradient(90deg,transparent 0px,black 7px);-webkit-mask-image:linear-gradient(90deg,transparent 0px,black 7px);" />
-    </div>
   </div>
-  <footer class="site-footer">
-    <small id="lastUpdated">Last updated: </small>
-  </footer>
   <script src="scripts.js"></script>
 </body>
 </html>
